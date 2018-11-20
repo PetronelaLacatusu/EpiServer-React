@@ -1,4 +1,5 @@
-﻿using Episerver_React.Models.Pages;
+﻿using EPiServer.Core;
+using Episerver_React.Models.Pages;
 
 namespace Episerver_React.Models.Interfaces
 {
@@ -11,5 +12,8 @@ namespace Episerver_React.Models.Interfaces
         T CurrentPage { get; }
 
         //SiteSettingsBlock SiteSettings { get; set; }       
+
+        //LayoutModel Layout { get; set; }
+        //IContent Section { get; set; }
     }
 }

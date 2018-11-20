@@ -248,6 +248,7 @@
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ItemGroup>
+    <Compile Include="Business\Initialization\CreateAdminUserAndRoles.cs" />
     <Compile Include="Business\Settings\ContentEditorTabs.cs" />
     <Compile Include="Controllers\BasePageController.cs" />
     <Compile Include="Controllers\DefaultPageController.cs" />
@@ -255,9 +256,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Blocks\BaseBlockData.cs" />
+    <Compile Include="Business\Rendering\ICustomCssInContentArea.cs" />
     <Compile Include="Models\Interfaces\IPageViewModel.cs" />
+    <Compile Include="Models\LayoutModel.cs" />
+    <Compile Include="Models\Pages\ArticlePage.cs" />
     <Compile Include="Models\Pages\BasePageData.cs" />
     <Compile Include="Models\Pages\HomePage.cs" />
+    <Compile Include="Models\Pages\StandardPage.cs" />
     <Compile Include="Models\ViewModels\PageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -265,7 +270,6 @@
     <Folder Include="Business\Components\" />
     <Folder Include="Business\EditorDescriptors\" />
     <Folder Include="Business\Factories\" />
-    <Folder Include="Business\Initialization\" />
     <Folder Include="Business\Rendering\Services\" />
     <Folder Include="Models\Media\" />
     <Folder Include="Models\Properties\" />
@@ -274,6 +278,10 @@
     <Folder Include="Views\Shared\DisplayTemplates\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\EPiServerDB_ace71f3e.mdf" />
+    <Content Include="App_Data\EPiServerDB_ace71f3e_log.ldf">
+      <DependentUpon>EPiServerDB_ace71f3e.mdf</DependentUpon>
+    </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Global.asax" />
     <Content Include="Web.config">
