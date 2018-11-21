@@ -8,7 +8,9 @@ using EPiServer.Core;
 using EPiServer.Framework.DataAnnotations;
 using EPiServer.Web;
 using EPiServer.Web.Mvc;
+using Episerver_React.Models.Interfaces;
 using Episerver_React.Models.Pages;
+using Episerver_React.Models.ViewModels;
 
 namespace Episerver_React.Controllers
 {
@@ -22,5 +24,6 @@ namespace Episerver_React.Controllers
 
             return View(string.Format("~/Views/Pages/{0}/Index.cshtml", currentPage.ViewName), model);
         }
+
     }
 }
